@@ -22,7 +22,6 @@ server.on('request', async (req, res) => {
         await fs.promises.unlink(filepath);
         res.statusCode = 200;
         res.end('OK');
-
       }
         break;
 
