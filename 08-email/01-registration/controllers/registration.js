@@ -25,7 +25,7 @@ module.exports.register = async (ctx, next) => {
     subject: 'Подтвердите почту',
   });
   ctx.body = {status: 'ok'};
-  return next();
+  return;
 };
 
 module.exports.confirm = async (ctx, next) => {
@@ -41,5 +41,5 @@ module.exports.confirm = async (ctx, next) => {
   const token = await ctx.login(user);
 
   ctx.body = {token};
-  return next();
+  return;
 };

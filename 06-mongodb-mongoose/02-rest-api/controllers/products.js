@@ -24,7 +24,7 @@ module.exports.productById = async function productById(ctx, next) {
   if (!ObjectId.isValid(id) || new ObjectId(id).toString() !== id) {
     ctx.status = 400;
     ctx.body = 'Product ID is invalid';
-    return next();
+    return;
   }
 
   const product = await Product.findOne({_id: id});

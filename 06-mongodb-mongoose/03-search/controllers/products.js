@@ -7,7 +7,7 @@ module.exports.productsByQuery = async function productsByQuery(ctx, next) {
 
   if (!query) {
     ctx.body = {products: []};
-    return next();
+    return;
   }
 
   const products = await Product.find({
